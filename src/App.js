@@ -56,12 +56,27 @@ function App() {
   }
 
   const train = async label => {
-    console.log(label);
+    console.log(label + " learning from video");
     for(let i=0;i<TRAINING_TIMES;i++){
       console.log(`Loading ${parseInt((i+1)/TRAINING_TIMES*100)}%`);
-      await sleep(100);
+      await trainProgress(label);
     }
+    console.log("Training end")
   }
+
+  // use machine learning to learn image hand
+  const trainProgress = label => {
+    return new Promise(async resolve => {
+      const embed = mobilenetModule.current.infer(
+        video.current, true
+      );
+      classifier.current.addExample(embed, label);
+      await sleep(100);
+      resolve();
+    })
+  }
+
+
   // slow down speed of training
   const sleep = ms => {
     return new Promise(resolve => {
