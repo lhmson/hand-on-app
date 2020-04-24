@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 // import {Howl} from 'howler';
-// import * as mobilenet from '@tensorflow-models/mobilenet';
-// import * as knnClassifier from '@tensorflow-models/knn-classifier';
+import * as mobilenet from '@tensorflow-models/mobilenet';
+import * as knnClassifier from '@tensorflow-models/knn-classifier';
 import './App.css';
 // import soundURL from './assets/noti_out.mp3';
 
@@ -12,12 +12,24 @@ import './App.css';
 
 function App() {
 
-  const video = useRef();
+  const video = useRef(); // read more about useRef in react
+  const mobilenetModule = useRef();
+  const classifier = useRef();
+
+  const TRAINING_TIMES = 50;
+  const HAND_ON_LABEL = "hand on";
+  const HAND_OUT_LABEL = "hand out";
   
   const init = async () => {
     console.log('init');
     await setupCamera();
-    console.log("setup camera enter")
+    console.log("setup camera enter");
+    // Load the model
+    mobilenetModule.current = await mobilenet.load();
+    // Create the classifier
+    classifier.current = knnClassifier.create();
+    console.log("setup success");
+    console.log("Hand out and click train btn");
   }
   // ask to access user camera
   const setupCamera = () => {
@@ -32,9 +44,9 @@ function App() {
           { video: true },
           stream => {
             video.current.srcObject = stream;
-            video.current.addEventListener('loadeddata', resolve)
+            video.current.addEventListener('loadeddata', resolve) // load resolve
           },
-          error => reject(error)
+          error => reject(error) // load reject
         );
       }
       else {
@@ -42,6 +54,21 @@ function App() {
       }
     });
   }
+
+  const train = async label => {
+    console.log(label);
+    for(let i=0;i<TRAINING_TIMES;i++){
+      console.log(`Loading ${parseInt((i+1)/TRAINING_TIMES*100)}%`);
+      await sleep(100);
+    }
+  }
+  // slow down speed of training
+  const sleep = ms => {
+    return new Promise(resolve => {
+      setTimeout(resolve,ms);
+    })
+  }
+
   useEffect(() => {
     init();
     console.log("it runs")
@@ -59,9 +86,15 @@ function App() {
         autoPlay
       />
       <div className="control">
-        <button className="btn">Train 1</button>
-        <button className="btn">Train 2</button>
-        <button className="btn">Start</button>
+        <button className="btn" onClick={() => {
+          train(HAND_ON_LABEL);
+        }}>Train 1</button>
+        <button className="btn" onClick={() => {
+          train(HAND_OUT_LABEL);
+        }}>Train 2</button>
+        <button className="btn" onClick={() => {
+
+        }}>Start</button>
       </div>
     </div>
   );
