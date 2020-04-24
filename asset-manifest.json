@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/hand-on-app/static/css/main.cdc17e8a.chunk.css",
-    "main.js": "/hand-on-app/static/js/main.342f7f54.chunk.js",
-    "main.js.map": "/hand-on-app/static/js/main.342f7f54.chunk.js.map",
+    "main.css": "/hand-on-app/static/css/main.188f073e.chunk.css",
+    "main.js": "/hand-on-app/static/js/main.5c69b987.chunk.js",
+    "main.js.map": "/hand-on-app/static/js/main.5c69b987.chunk.js.map",
     "runtime-main.js": "/hand-on-app/static/js/runtime-main.c2339e2b.js",
     "runtime-main.js.map": "/hand-on-app/static/js/runtime-main.c2339e2b.js.map",
-    "static/js/2.80c9115a.chunk.js": "/hand-on-app/static/js/2.80c9115a.chunk.js",
-    "static/js/2.80c9115a.chunk.js.map": "/hand-on-app/static/js/2.80c9115a.chunk.js.map",
+    "static/js/2.be8d0187.chunk.js": "/hand-on-app/static/js/2.be8d0187.chunk.js",
+    "static/js/2.be8d0187.chunk.js.map": "/hand-on-app/static/js/2.be8d0187.chunk.js.map",
     "index.html": "/hand-on-app/index.html",
-    "precache-manifest.9ba6646c0dabd852906ecee0ffffd11b.js": "/hand-on-app/precache-manifest.9ba6646c0dabd852906ecee0ffffd11b.js",
+    "precache-manifest.27e06ff5b77c9b759fbd6fdd7bc3dae2.js": "/hand-on-app/precache-manifest.27e06ff5b77c9b759fbd6fdd7bc3dae2.js",
     "service-worker.js": "/hand-on-app/service-worker.js",
-    "static/css/main.cdc17e8a.chunk.css.map": "/hand-on-app/static/css/main.cdc17e8a.chunk.css.map",
-    "static/js/2.80c9115a.chunk.js.LICENSE.txt": "/hand-on-app/static/js/2.80c9115a.chunk.js.LICENSE.txt",
-    "static/media/noti_out.mp3": "/hand-on-app/static/media/noti_out.68be52cc.mp3"
+    "static/css/main.188f073e.chunk.css.map": "/hand-on-app/static/css/main.188f073e.chunk.css.map",
+    "static/js/2.be8d0187.chunk.js.LICENSE.txt": "/hand-on-app/static/js/2.be8d0187.chunk.js.LICENSE.txt",
+    "static/media/Beep_Short.mp3": "/hand-on-app/static/media/Beep_Short.f19846ae.mp3",
+    "static/media/Glass_Crunch.mp3": "/hand-on-app/static/media/Glass_Crunch.3572f2a8.mp3",
+    "static/media/App.css": "/hand-on-app/static/media/darker.8ab1d92a.jpg",
+    "static/media/index.css": "/hand-on-app/static/media/pinksky.d0d9c1ae.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.c2339e2b.js",
-    "static/js/2.80c9115a.chunk.js",
-    "static/css/main.cdc17e8a.chunk.css",
-    "static/js/main.342f7f54.chunk.js"
+    "static/js/2.be8d0187.chunk.js",
+    "static/css/main.188f073e.chunk.css",
+    "static/js/main.5c69b987.chunk.js"
   ]
 }
