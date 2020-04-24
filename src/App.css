@@ -21,7 +21,7 @@
 }
 
 .btn {
-  margin: 0 9px;
+  margin: 0 2.5px;
   padding: 5px 10px;
   font-size: 1.5rem;
 }
@@ -37,4 +37,10 @@
   list-style: none;
 }
 
-
+@media only screen and (max-width: 560px) {
+  .btn{
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+  }
+}
