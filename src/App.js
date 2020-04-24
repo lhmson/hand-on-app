@@ -1,20 +1,23 @@
-import React, { useEffect, useRef } from 'react';
-// import {Howl} from 'howler';
+import React, { useEffect, useRef, useState } from 'react';
+import {Howl} from 'howler';
 import * as mobilenet from '@tensorflow-models/mobilenet';
 import * as knnClassifier from '@tensorflow-models/knn-classifier';
+import { initNotifications, notify } from '@mycv/f8-notification';
 import './App.css';
-// import soundURL from './assets/noti_out.mp3';
+import soundURL from './assets/noti_out.mp3';
 
-// var sound = new Howl({
-//   src: [soundURL]
-// });
-// sound.play();
+var sound = new Howl({
+  src: [soundURL]
+});
 
 function App() {
 
   const video = useRef(); // read more about useRef in react
   const mobilenetModule = useRef();
   const classifier = useRef();
+
+  const [handon, setHandon] = useState(false);
+  const soundHandle = useRef(true);
 
   const TRAINING_TIMES = 50;
   const HAND_ON_LABEL = "hand on";
@@ -31,6 +34,8 @@ function App() {
     classifier.current = knnClassifier.create();
     console.log("setup success");
     console.log("Hand out and click train btn");
+    // display noti
+    initNotifications({ cooldown: 3000 });
   }
   // ask to access user camera
   const setupCamera = () => {
@@ -83,12 +88,20 @@ function App() {
       video.current, true
       );
       const result = await classifier.current.predictClass(embed);
-      
+
       if(result.label === HAND_ON_LABEL && result.confidences[result.label]>DETECT_CONFIDENCE) {
         console.log("Hand on");
+        // turn on noti there
+        if(soundHandle.current == true){
+          soundHandle.current = false;
+          sound.play();
+        }
+        notify('Let your hand out of face immediately', { body: 'Hey, do you know that keyboard contains lots of bacteria and virus, even dirtier than toilet. There is COVID around the world. Keep healthy for yourself and family' });
+        setHandon(true);
       }
       else{
         console.log("Hand out");
+        setHandon(false);
       }
       // run again in 1 seconds
       await sleep(200);
@@ -108,13 +121,19 @@ function App() {
   useEffect(() => {
     init();
     console.log("it runs")
+
+    // sound handle
+    sound.on('end', function(){
+      soundHandle.current = true;
+    });
+
     // cleanup
     return () => {
 
     }
   }, []);
   return (
-    <div className="main">
+    <div className={`main ${handon? "handon" : " "}`}>
       <h1>HELLO TO MY APP</h1>
       <video
         ref={video}

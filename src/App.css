@@ -5,6 +5,10 @@
   justify-content: center;
 }
 
+.main.handon {
+  background-color: red;
+}
+
 .video {
   width: 480px;
   height: 360px;
@@ -19,5 +23,4 @@
   margin: 0 9px;
   padding: 5px 10px;
   font-size: 1.5rem;
-
 }
