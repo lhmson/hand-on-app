@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/hand-on-app/static/css/main.cdc17e8a.chunk.css",
+    "main.js": "/hand-on-app/static/js/main.342f7f54.chunk.js",
+    "main.js.map": "/hand-on-app/static/js/main.342f7f54.chunk.js.map",
+    "runtime-main.js": "/hand-on-app/static/js/runtime-main.c2339e2b.js",
+    "runtime-main.js.map": "/hand-on-app/static/js/runtime-main.c2339e2b.js.map",
+    "static/js/2.80c9115a.chunk.js": "/hand-on-app/static/js/2.80c9115a.chunk.js",
+    "static/js/2.80c9115a.chunk.js.map": "/hand-on-app/static/js/2.80c9115a.chunk.js.map",
+    "index.html": "/hand-on-app/index.html",
+    "precache-manifest.9ba6646c0dabd852906ecee0ffffd11b.js": "/hand-on-app/precache-manifest.9ba6646c0dabd852906ecee0ffffd11b.js",
+    "service-worker.js": "/hand-on-app/service-worker.js",
+    "static/css/main.cdc17e8a.chunk.css.map": "/hand-on-app/static/css/main.cdc17e8a.chunk.css.map",
+    "static/js/2.80c9115a.chunk.js.LICENSE.txt": "/hand-on-app/static/js/2.80c9115a.chunk.js.LICENSE.txt",
+    "static/media/noti_out.mp3": "/hand-on-app/static/media/noti_out.68be52cc.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c2339e2b.js",
+    "static/js/2.80c9115a.chunk.js",
+    "static/css/main.cdc17e8a.chunk.css",
+    "static/js/main.342f7f54.chunk.js"
+  ]
+}
