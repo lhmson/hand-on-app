@@ -181,11 +181,12 @@ function App() {
           <li className="steps">4. Put your hand in front of your screen and near the face so that it can be seen at the bottom of the webcam frame</li>
           <li className="steps">5. Click button Train Hands on, now move your hand freely towards the center of your face as long as it appears in the webcam frame, you can use both hands. Remember at least one of your hands appears in the frame. Do it for 10 seconds (until there is a signal on)</li>
           <li className="steps">6. Now put your hands down and click on button Train hands out, then you cannot put your hand so that it stays in the frame for 10 seconds (until a signal is on). Things in background should be the same too</li>
-          <li className="steps">7. Click on Run and enjoy the time working on the computer and your hands may not touch your face for clean, leave this page open and go to another window or tab to work</li>
+          <li className="steps">7. Click on Start button and enjoy the time working on the computer and your hands may not touch your face for clean, leave this page open and go to another window or tab to work</li>
           <li className="steps">8. Enjoy safe COVID outbreak</li>
+          <li className="steps"><code>Best use on computer, some function may be missed on some mobiles</code></li>
         </ul>
       </div>
-      <div>
+      <div className="footer">
         <h3>Lee Sown 2020 - product learned from Internet</h3>
       </div>
     </div>
