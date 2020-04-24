@@ -6,7 +6,8 @@
 }
 
 .main.handon {
-  background-color: red;
+  background-image: url(assets/darker.jpg);
+  background-size: cover;
 }
 
 .video {
@@ -24,3 +25,16 @@
   padding: 5px 10px;
   font-size: 1.5rem;
 }
+
+.ruleSet{
+  background-color: navy;
+  margin: 5px 12px;
+}
+
+.list {
+  font-size: 1.84rem;
+  padding: 20px 15px;
+  list-style: none;
+}
+
+

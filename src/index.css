@@ -6,4 +6,7 @@
 
 html {
   font-size: 69%;
+  color: yellow;
+  background-image: url(assets/pinksky.jpg);
+  background-size: cover;
 }
