@@ -19,6 +19,7 @@ function App() {
   const TRAINING_TIMES = 50;
   const HAND_ON_LABEL = "hand on";
   const HAND_OUT_LABEL = "hand out";
+  const DETECT_CONFIDENCE = 0.89;
   
   const init = async () => {
     console.log('init');
@@ -76,9 +77,29 @@ function App() {
     })
   }
 
+  const run = async () => {
+    try{
+      const embed = mobilenetModule.current.infer(
+      video.current, true
+      );
+      const result = await classifier.current.predictClass(embed);
+      
+      if(result.label === HAND_ON_LABEL && result.confidences[result.label]>DETECT_CONFIDENCE) {
+        console.log("Hand on");
+      }
+      else{
+        console.log("Hand out");
+      }
+      // run again in 1 seconds
+      await sleep(200);
+      run();
+    } catch {
+      alert("Data has not been entered through image hand training")
+    }
+  }
 
   // slow down speed of training
-  const sleep = ms => {
+  const sleep = (ms = 0) => {
     return new Promise(resolve => {
       setTimeout(resolve,ms);
     })
@@ -103,12 +124,12 @@ function App() {
       <div className="control">
         <button className="btn" onClick={() => {
           train(HAND_ON_LABEL);
-        }}>Train 1</button>
+        }}>Train Hands on</button>
         <button className="btn" onClick={() => {
           train(HAND_OUT_LABEL);
-        }}>Train 2</button>
+        }}>Train Hands out</button>
         <button className="btn" onClick={() => {
-
+          run();
         }}>Start</button>
       </div>
     </div>
