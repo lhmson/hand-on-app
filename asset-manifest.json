@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/hand-on-app/static/css/main.41c34a47.chunk.css",
-    "main.js": "/hand-on-app/static/js/main.5c69b987.chunk.js",
-    "main.js.map": "/hand-on-app/static/js/main.5c69b987.chunk.js.map",
+    "main.css": "/hand-on-app/static/css/main.33f806f7.chunk.css",
+    "main.js": "/hand-on-app/static/js/main.081255e9.chunk.js",
+    "main.js.map": "/hand-on-app/static/js/main.081255e9.chunk.js.map",
     "runtime-main.js": "/hand-on-app/static/js/runtime-main.c2339e2b.js",
     "runtime-main.js.map": "/hand-on-app/static/js/runtime-main.c2339e2b.js.map",
     "static/js/2.be8d0187.chunk.js": "/hand-on-app/static/js/2.be8d0187.chunk.js",
     "static/js/2.be8d0187.chunk.js.map": "/hand-on-app/static/js/2.be8d0187.chunk.js.map",
     "index.html": "/hand-on-app/index.html",
-    "precache-manifest.0f0690f1dae386e9636b624aa36702f6.js": "/hand-on-app/precache-manifest.0f0690f1dae386e9636b624aa36702f6.js",
+    "precache-manifest.548d617f1b17bf24b90814a3a2e61538.js": "/hand-on-app/precache-manifest.548d617f1b17bf24b90814a3a2e61538.js",
     "service-worker.js": "/hand-on-app/service-worker.js",
-    "static/css/main.41c34a47.chunk.css.map": "/hand-on-app/static/css/main.41c34a47.chunk.css.map",
+    "static/css/main.33f806f7.chunk.css.map": "/hand-on-app/static/css/main.33f806f7.chunk.css.map",
     "static/js/2.be8d0187.chunk.js.LICENSE.txt": "/hand-on-app/static/js/2.be8d0187.chunk.js.LICENSE.txt",
     "static/media/Beep_Short.mp3": "/hand-on-app/static/media/Beep_Short.f19846ae.mp3",
     "static/media/Glass_Crunch.mp3": "/hand-on-app/static/media/Glass_Crunch.3572f2a8.mp3",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.c2339e2b.js",
     "static/js/2.be8d0187.chunk.js",
-    "static/css/main.41c34a47.chunk.css",
-    "static/js/main.5c69b987.chunk.js"
+    "static/css/main.33f806f7.chunk.css",
+    "static/js/main.081255e9.chunk.js"
   ]
 }

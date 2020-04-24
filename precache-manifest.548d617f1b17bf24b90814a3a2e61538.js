@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5b3f59161d2bdaa26cc465d0925985a3",
+    "revision": "c7d125bd9cdd4e8deb398c4d31af2595",
     "url": "/hand-on-app/index.html"
   },
   {
-    "revision": "89115ab85310c40613ff",
-    "url": "/hand-on-app/static/css/main.41c34a47.chunk.css"
+    "revision": "548168a3ab0905de79e7",
+    "url": "/hand-on-app/static/css/main.33f806f7.chunk.css"
   },
   {
     "revision": "deed0b347581f7612cfc",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hand-on-app/static/js/2.be8d0187.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "89115ab85310c40613ff",
-    "url": "/hand-on-app/static/js/main.5c69b987.chunk.js"
+    "revision": "548168a3ab0905de79e7",
+    "url": "/hand-on-app/static/js/main.081255e9.chunk.js"
   },
   {
     "revision": "c8a3bbdffcf3f2e65bae",
